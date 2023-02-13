@@ -1,0 +1,97 @@
+:root {
+  --color-one: #f9a7b7;
+  --color-two: #e0f6eb;
+  --color-three: #b7d7c9;
+  --font-principal: 'Chelsea Market', cursive;
+  --font-secondary: 'Poiret One', cursive;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  background-color: var(--color-one);
+  font-family: var(--font-principal);
+  text-align: end;
+}
+
+h1 {
+  font-family: var(--font-principal);
+  text-align: center;
+  margin-block-start: 10%;
+  margin-block-end: 3%;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0%;
+  padding: 15px 32px;
+  font-size: 1.3em;
+}
+
+.container {
+  min-height: 100%;
+  margin: 0 auto -142px;
+  font-family: var(--font-secondary);
+  border-radius: 20px;
+  background-color: var(--color-two);
+  max-width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+input {
+  font-family: var(--font-secondary);
+  width: 64%;
+  border: 0;
+  outline: none;
+  background-color: #fae0e7;
+  border-radius: 5px;
+  /*border-bottom: 1px solid #f9a7b7;*/
+  padding: 18px;
+  letter-spacing: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  font-family: var(--font-principal);
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  /*background-color: rgba(183, 215, 201, 100);*/
+  border-radius: 15px;
+  padding: 13px;
+  margin-block-start: 15px;
+  margin-block-end: 15px;
+  background: linear-gradient(90deg, rgba(249, 167, 183, 1) 3%, rgba(224, 246, 235, 0.7819502801120448) 37%, rgba(183, 215, 201, 0.510688836104513) 57%);
+}
+
+footer {
+  background-color: var(--color-three);
+  font-family: var(--font-secondary);
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+/*
+.deco {
+  border-radius: 30% 70% 70% 30% / 30% 39% 61% 70%;
+  width: 490px;
+  height: 490px;
+  background: linear-gradient(90deg, rgba(249, 167, 183, 1) 3%, rgba(224, 246, 235, 0.7819502801120448) 37%, rgba(183, 215, 201, 0.510688836104513) 57%);
+
+} */
