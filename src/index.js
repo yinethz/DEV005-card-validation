@@ -1,25 +1,40 @@
 import validator from './validator.js';
 
 
-function validarDatos() {
+function validarDatos(event) {
+  event.preventDefault();
 
-  const number = document.getElementById("number").value;
+  const cardNumber = document.getElementById("cardNumber").value;
   const name = document.getElementById("name").value;
-  console.log(number, name);
   const dataRecorded = document.getElementById("dataRecorded");
-  const numberMaskify = validator.maskify(number);
-  dataRecorded.innerText = "Hola " + name + " su número de tarjeta es: " + numberMaskify;
+  const numberMaskify = validator.maskify(cardNumber);
+  dataRecorded.innerText = "Hola " + name + ", su número de tarjeta es: " + numberMaskify;
+  const cardValid = document.getElementById("cardValid");
+  if (validator.isValid(cardNumber)) {
+    cardValid.innerText = "Tarjeta " + numberMaskify;
+  }
 
 }
+
 
 function limitNumber() {
-  const input = document.getElementById("number");
-  const number = input.value;
-  input.value = validator.limit(number);
-
+  const input = document.getElementById("cardNumber");
+  const cardNumber = input.value;
+  input.value = validator.limit(cardNumber);
 }
 
-window.limit = limitNumber;
-window.validar = validarDatos;
+
+// permite publicar algo de manera 100% global... :D
+//window.limit = limitNumber;
+//window.validar = validarDatos;
+
+
+const validateForm = document.getElementById('validateForm');
+validateForm.addEventListener('submit', validarDatos);
+const cardNumber = document.getElementById("cardNumber");
+cardNumber.addEventListener('keyup', limitNumber);
+
+
+
 
 //console.log(validator);

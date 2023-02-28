@@ -19,18 +19,18 @@
   </header>
   <main>
     <h1>Validemos tu tarjeta 😃</h1>
-    <form class="container">
+    <form id="validateForm" class="container">
       <h3>Número de la tarjeta</h3>
-      <input id="number" type="number" onkeyup="limit()" />
+      <input id="cardNumber" type="number" />
       <h3>Nombre Completo</h3>
       <input id="name" type="text" />
-      <a type="submit" onclick="validar()">Validar 🤓</a>
-      <!--<button type="submit" onclick="validar()">Validar 🤓</button>-->
+      <!-- <a type="submit" onclick="validar()">Validar 🤓</a> -->
+      <button type="submit">Validar 🤓</button>
     </form>
     <!-- <div class="deco"></div> -->
     <section class="container">
       <h3 id="dataRecorded"></h3>
-      <h3>Tarjeta de crédito No valida</h3>
+      <h3 id="cardValid"></h3>
     </section>
   </main>
   <footer>

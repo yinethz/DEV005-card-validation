@@ -3,13 +3,24 @@ const validator = {
     if (word.length <= 4) {
       return word;
     }
-    return word.slice(0, -4).replace(/[0-9]/g, '#') + word.slice(-4);
+    return word.slice(0, -4).replace(/./g, '#') + word.slice(-4);
   },
-  limit: function (number) {
-    if (number.length > 16) {
-      return number.slice(0, 16);
+  limit: function (cardNumber) {
+    if (cardNumber.length > 16) {
+      return cardNumber.slice(0, 16);
     }
-    return number;
+    return cardNumber;
+  },
+
+  isValid: function (cardNumber) {
+    const numberArr = cardNumber.split('');
+    console.log(numberArr);
+    const numberReverse = numberArr.reverse();
+    console.log(numberReverse);
+
+
+
+    return true;
   }
 };
 
