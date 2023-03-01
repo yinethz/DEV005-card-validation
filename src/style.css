@@ -47,6 +47,11 @@ p {
   margin: auto;
 }
 
+.imp {
+  margin-top: 30px;
+  background-color: #fae0e7;
+}
+
 input {
   font-family: var(--font-secondary);
   width: 64%;

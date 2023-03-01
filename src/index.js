@@ -8,14 +8,14 @@ function validarDatos(event) {
   const name = document.getElementById("name").value;
   const dataRecorded = document.getElementById("dataRecorded");
   const numberMaskify = validator.maskify(cardNumber);
-  dataRecorded.innerText = "Hola " + name + ", su número de tarjeta es: " + numberMaskify;
+  dataRecorded.innerText = "Hola " + name;
   const cardValid = document.getElementById("cardValid");
   if (validator.isValid(cardNumber)) {
-    cardValid.innerText = "Tarjeta " + numberMaskify;
+    cardValid.innerText = "Tarjeta " + numberMaskify + " es válida";
+  } else {
+    cardValid.innerText = "Tarjeta " + numberMaskify + " no es válida";
   }
-
 }
-
 
 function limitNumber() {
   const input = document.getElementById("cardNumber");
