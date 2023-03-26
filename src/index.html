@@ -15,28 +15,26 @@
 
 <body>
   <header>
-    <p class="title">🐾 Card Validation</p>
+    <span class="title">🐾 Card Validation</span>
   </header>
   <main>
     <h1>Validemos tu tarjeta 😃</h1>
     <form id="validateForm" class="container">
-      <h3>Número de la tarjeta</h3>
+      <label>Número de la tarjeta</label>
       <input id="cardNumber" type="number" required />
-      <h3>Nombre Completo</h3>
+      <label>Nombre Completo</label>
       <input id="name" type="text" required />
       <!-- <a type="submit" onclick="validar()">Validar 🤓</a> -->
       <button type="submit">Validar 🤓</button>
     </form>
     <!-- <div class="deco"></div> -->
     <section class="container imp">
-      <h3 id="dataRecorded"></h3>
-      <h3 id="cardValid"></h3>
+      <div id="dataRecorded"></div>
+      <div id="cardValid"></div>
     </section>
   </main>
-  <footer>
-    <p class="footer">
-      Laboratoria 💛
-    </p>
+  <footer class="footer">
+    Laboratoria 💛
   </footer>
   <script src="index.js" type="module"></script>
 </body>
