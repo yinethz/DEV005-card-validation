@@ -22,7 +22,7 @@ header {
 h1 {
   font-family: var(--font-principal);
   text-align: center;
-  margin-block-start: 10%;
+  margin-block-start: 6%;
   margin-block-end: 3%;
   letter-spacing: 3px;
 }
